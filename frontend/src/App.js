@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
@@ -12,7 +12,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/shop" element={<HomePage />} />
+          <Route path="/" element={<Navigate replace to="/shop" />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </Router>

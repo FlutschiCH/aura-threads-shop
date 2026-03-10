@@ -8,9 +8,9 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <Link to="/" className="nav-brand">Aura Threads</Link>
+            <Link to="/shop" className="nav-brand">Aura Threads</Link>
             <div className="nav-links">
-                <Link to="/">Shop</Link>
+                <Link to="/shop">Shop</Link>
                 <Link to="/cart">Cart ({itemCount})</Link>
             </div>
         </nav>
